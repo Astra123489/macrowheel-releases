@@ -1,7 +1,7 @@
 {
   "product": "macro-wheel",
   "channel": "stable",
-  "version": "6.3.0",
+  "version": "0.5.0",
   "minimumSupportedVersion": "0.0.0",
   "releaseDate": "2026-10-06",
   "releaseNotes": "**A pre-release, and it is a rehearsal rather than a shipping build.**\n\nThis is the first release the pipeline has produced, and its purpose is to prove the pipeline rather than to\nbe used. Three things about it are deliberately provisional:\n\n- **It is a debug build.** The project's rule is that *the debug build is the build the user experiences*\n  while the application is in development, and `updater/publish.py` builds that profile. A debug build marked\n  as a full release would say something untrue about it, which is why this one is a pre-release.\n- **It is unsigned.** §25.59 asks for package signing *\"where practical\"*, and no signing certificate exists\n  yet. The manifest carries a SHA-256, which §25.58 requires, and no signature, which §25.59 permits.\n- **The update system cannot install it.** The download half is built and tested against a fake transport\n  (D-0251), but the application half — the HTTP client and the staging root — is not wired, so nothing in the\n  application can fetch this yet.\n\n**What it does prove:** that a release can be produced, published and read back — the installer built, the\nmanifest generated with a digest that matches the bytes, the release created, and the manifest committed where\nan unauthenticated updater can reach it.\n\nMacro Wheel is a Windows companion for DaVinci Resolve: **Studio** authors, validates and publishes a\nconfiguration, and **Menu** is a standalone overlay that reads it.",
@@ -12,9 +12,9 @@
   "platforms": {
     "windows": {
       "x86_64": {
-        "url": "https://github.com/Astra123489/macrowheel-releases/releases/download/v6.3.0/MacroWheel-6.3.0-Windows.exe",
-        "sha256": "f34fe9f9d63ac9cb05253332febcb85ec3d4c0b782aff8b123dc36cf7588fbfa",
-        "size": 23933154,
+        "url": "https://github.com/Astra123489/macrowheel-releases/releases/download/v0.5.0/MacroWheel-0.5.0-Windows.exe",
+        "sha256": "0940b6ac24d428988fc8e7560c5e7efecfcdef4e3b130aa079505db3d9cd0d2d",
+        "size": 24216957,
         "signature": null
       }
     }
