@@ -1,7 +1,7 @@
 {
   "product": "macro-wheel",
   "channel": "stable",
-  "version": "0.6.5",
+  "version": "0.6.6",
   "minimumSupportedVersion": "0.0.0",
   "releaseDate": "2026-10-27",
   "releaseNotes": null,
@@ -12,9 +12,9 @@
   "platforms": {
     "windows": {
       "x86_64": {
-        "url": "https://github.com/Astra123489/macrowheel-releases/releases/download/v0.6.5/MacroWheel-0.6.5-Windows.exe",
-        "sha256": "31600de5e53b759af8b41a0738171b34967643e7a214a6519deeecbf34cfe5e1",
-        "size": 21313680,
+        "url": "https://github.com/Astra123489/macrowheel-releases/releases/download/v0.6.6/MacroWheel-0.6.6-Windows.exe",
+        "sha256": "7284dc255e82a3c2b518c9fccd8342dab772df08e4823063307792a6bff1390d",
+        "size": 21326730,
         "signature": null
       }
     }
