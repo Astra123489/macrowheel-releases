@@ -1,10 +1,10 @@
 {
   "product": "macro-wheel",
   "channel": "stable",
-  "version": "0.6.6",
+  "version": "1.0.0",
   "minimumSupportedVersion": "0.0.0",
-  "releaseDate": "2026-10-27",
-  "releaseNotes": null,
+  "releaseDate": "2026-10-30",
+  "releaseNotes": "Macro Wheel 1.0.0 — the core release candidate.\n\nA quick-action wheel for DaVinci Resolve on Windows. Studio authors and publishes a configuration;\nthe Menu is a standalone overlay that reads it and never launches Studio.\n\n**Requirements:** Windows 10/11 x64, DaVinci Resolve (the Studio edition is not required).\n\n**What is in this build**\n\n- Studio: the wheel editor, actions and catalogue, scripts, profiles, themes, the Guide, and the\n  first-run setup.\n- The Menu: the overlay wheel, the profile pill and hint row, keyboard-driven actions, and Live Sync.\n- The Python bridge that observes Resolve, and the isolated script runtime.\n\n**Verification:** 1712 Rust tests, 566 Studio frontend, 15 Menu frontend, and 108 + 13 visual\nregression states. The acceptance record, including what a suite cannot claim, is in the source\nrepository at `docs/acceptance-report.md`.\n\n**Not in this release:** the installer's previous-version restore is present, but licensing and the\nupdater are deferred scope and are not part of this candidate.",
   "configuration": {
     "schemaVersion": 13,
     "oldestMigratableVersion": 4
@@ -12,9 +12,9 @@
   "platforms": {
     "windows": {
       "x86_64": {
-        "url": "https://github.com/Astra123489/macrowheel-releases/releases/download/v0.6.6/MacroWheel-0.6.6-Windows.exe",
-        "sha256": "7284dc255e82a3c2b518c9fccd8342dab772df08e4823063307792a6bff1390d",
-        "size": 21326730,
+        "url": "https://github.com/Astra123489/macrowheel-releases/releases/download/v1.0.0/MacroWheel-1.0.0-Windows.exe",
+        "sha256": "f591266296d2bc5ed59e082ceb93fc0caab9bbbf4215b506d48fb8730e933d64",
+        "size": 21375498,
         "signature": null
       }
     }
