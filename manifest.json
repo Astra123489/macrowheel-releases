@@ -1,10 +1,10 @@
 {
   "product": "macro-wheel",
   "channel": "stable",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "minimumSupportedVersion": "0.0.0",
   "releaseDate": "2026-11-04",
-  "releaseNotes": "**Setup**\n\n- The Shortcut Preset screen now reads the preset files you choose, and the published\n  configuration carries the command map the Menu resolves against. Without that map the\n  wheel could not open at all — a press of the activation key did nothing.\n- Preset paths that cannot be read are reported on the screen instead of failing quietly.\n\n**Installer**\n\n- The finish page offers a desktop shortcut for each application.\n- The bundled Python environment ships inside the installer, so a clean machine has a\n  working runtime immediately instead of downloading CPython on first launch.\n- Closing Studio now ends its process. It used to leave a hidden window — and its whole\n  WebView2 tree, a few hundred megabytes — running with nothing on screen.\n- The uninstaller removes the bundled environment, keeps the packages you installed, and\n  offers to delete everything else on the account.\n\n**Menu**\n\n- A press that cannot open the wheel now shows the reason instead of doing nothing.\n- The overlay is click-through while a status card is up, and non-click-through while the\n  wheel is, as the overlay contract requires.\n\n**Python**\n\n- Packages you install go into your own folder, so a repair of the bundled environment no\n  longer removes them. The bundled packages are never replaced.",
+  "releaseNotes": "**Fixes**\n\n- The Resolve bridge now generates its UI Automation typelib on first use. On a clean\n  machine it previously failed with `BRIDGE_UIA_FAILURE` — *\"comtypes or the UI Automation\n  typelib is unavailable\"* — and the wheel never opened, because the bridge imported the\n  generated module before the call that generates it.\n- A generated typelib no longer counts as a change to the bundled runtime, so the Command\n  Runtime stops reporting an integrity mismatch once the bridge has run.\n\n**Installer**\n\n- Repaired the step that places the bundled Python environment: the installer was renaming\n  the folder it was working in, which Windows refuses, so the environment was never put in\n  place and an existing one was removed instead.",
   "configuration": {
     "schemaVersion": 13,
     "oldestMigratableVersion": 4
@@ -12,9 +12,9 @@
   "platforms": {
     "windows": {
       "x86_64": {
-        "url": "https://github.com/Astra123489/macrowheel-releases/releases/download/v1.0.1/MacroWheel-1.0.1-Windows.exe",
-        "sha256": "9fab16e132d4cc93fb75eaaa6f47fb354f5a6c9893447da59dd9f3536bd723cc",
-        "size": 42485876,
+        "url": "https://github.com/Astra123489/macrowheel-releases/releases/download/v1.0.2/MacroWheel-1.0.2-Windows.exe",
+        "sha256": "f3fe8c8b803d4b4e58c0628b037bbef5646a322bb3c20e800ca7f3188536bc4b",
+        "size": 42484749,
         "signature": null
       }
     }
