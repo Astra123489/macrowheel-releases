@@ -1,10 +1,10 @@
 {
   "product": "macro-wheel",
   "channel": "stable",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "minimumSupportedVersion": "0.0.0",
-  "releaseDate": "2026-11-04",
-  "releaseNotes": "**Fixes**\n\n- The Resolve bridge now generates its UI Automation typelib on first use. On a clean\n  machine it previously failed with `BRIDGE_UIA_FAILURE` — *\"comtypes or the UI Automation\n  typelib is unavailable\"* — and the wheel never opened, because the bridge imported the\n  generated module before the call that generates it.\n- A generated typelib no longer counts as a change to the bundled runtime, so the Command\n  Runtime stops reporting an integrity mismatch once the bridge has run.\n\n**Installer**\n\n- Repaired the step that places the bundled Python environment: the installer was renaming\n  the folder it was working in, which Windows refuses, so the environment was never put in\n  place and an existing one was removed instead.",
+  "releaseDate": "2026-11-18",
+  "releaseNotes": "**Licensing**\n\n- A licence key now allows **one activation**. Until this version a key could be activated on any\n  number of machines, because the application never read the use count the store returns — the store\n  counts activations but does not refuse them, and enforcing a limit is the seller's job.\n- Activating a second time is refused with a message that says so, and the key itself is untouched.\n- If you replace a machine or reinstall Windows, the activation count can be reset from the store's\n  dashboard; nothing else about the key changes.\n\n**Uninstalling on Windows 11**\n\n- Smart App Control, which is on by default on a clean Windows 11 installation, blocks\n  `uninstall.exe`. The file is created on your machine at install time, so it has neither a signature\n  nor a download history — and Windows allows what it can predict is safe, otherwise requires a\n  signature. Microsoft provides no per-application bypass.\n- What you see is an NSIS box reading *\"Error launching installer\"*, which looks like a broken\n  uninstaller rather than a security block. That is why this version ships a removal path that is not\n  an executable.\n- **`Remove-MacroWheel.cmd` and `Remove-MacroWheel.ps1`** are now placed in the installation folder.\n  Double-click the `.cmd` and type `YES`. They remove the application, both desktop shortcuts, the\n  Start menu folder, the Add/Remove Programs entry and the bundled Python — and keep your\n  configuration, Profiles, Actions, Scripts, custom icons and the packages you installed yourself.\n- Run it with **`-DeleteUserData`** if you are finished with Macro Wheel on that machine. That also\n  removes `%APPDATA%\\MacroWheel` and both WebView2 caches, about 550 MB in all, and none of it can be\n  recovered.\n- Run it with **`-DryRun`** to see exactly what would be removed, without changing anything.\n\n**Installer**\n\n- The uninstaller now removes those two files, so an uninstall no longer leaves the installation\n  folder behind.",
   "configuration": {
     "schemaVersion": 13,
     "oldestMigratableVersion": 4
@@ -12,9 +12,9 @@
   "platforms": {
     "windows": {
       "x86_64": {
-        "url": "https://github.com/Astra123489/macrowheel-releases/releases/download/v1.0.2/MacroWheel-1.0.2-Windows.exe",
-        "sha256": "f3fe8c8b803d4b4e58c0628b037bbef5646a322bb3c20e800ca7f3188536bc4b",
-        "size": 42484749,
+        "url": "https://github.com/Astra123489/macrowheel-releases/releases/download/v1.0.3/MacroWheel-1.0.3-Windows.exe",
+        "sha256": "7372df37bd978f5853743c55ab5c6a9c25c2d4ac0bf842fe4bb2b0375f17820e",
+        "size": 42491006,
         "signature": null
       }
     }
